@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+/* Variables */
+:root {
+  --font-family: "Kode Mono", monospace;
+  --normal-font-size: 400;
+  --bold-font:700;
+  --bg-color: #e8fedf;
+  --third-color:#e4e4e4;
+  --primary-color: #0c2801;
+  --secondary-color: #ff35c6;
+  --primary-shadow: #b5bcb3;
+  --secondary-shadow: #b7509a;
+  --bottom-margin: 0.5rem;
+  --bottom-margin2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+nav {
+  position:sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--third-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+  color: var(--third-color);
+}
+
+.page-item{
+  background-color: #e4e4e4;
+  color: var(--secondary-shadow);
+}
+

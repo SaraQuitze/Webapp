@@ -1,0 +1,38 @@
+{% extends 'games/base.html' %}
+
+{% load static crispy_forms_tags %}
+
+{% block content %}
+
+    <div class="mt-5">
+        <h3>
+            {% if games %}
+            Editar
+            {% else %}
+            Nuevo
+            {% endif %}
+            Registro
+        </h3>
+    </div>
+
+    <form action="" method="post" class="mt-5 mx-auto" style="max-width: 320px;" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+
+        {{ form|crispy }}
+
+        <div class="text-end mt-5 mx-auto">
+            <a href="{% url 'games_list' %}" class="btn btn-light me-1">
+                Cancelar
+            </a>
+            <button class="btn btn-outline-primary">
+                {% if games %}
+                Actualizar
+                {% else %}
+                Nuevo
+                {% endif %} 
+                Registro
+            </button>
+        </div>
+    </form>
+
+    {% endblock content %}

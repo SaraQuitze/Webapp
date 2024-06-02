@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almacenamiento de juegos con django</title>
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="{% static 'static/css/styles.css'%}">
+    <!--Bootstrap Styles -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="#"
+    />
+
+</head>
+<body class="container py-5">
+    
+    <div class="p-5 border border-1 shadow rounded">
+        <h1 class="fw-bold text-primary">Bienvenid@ a AppVGame</h1>
+        <h2 class="fw-normal text-primary">Aplicación de gestión de videojuegos 2D</h2>
+
+        <p class="fw-normal">
+            alojamiento y gestión de videojuegos 2D en Lua y C#
+        </p>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+      <p class="copy">&copy; Copyright 2024</p>
+      <p class="copy">
+        Built with &#x1F49A; by
+        <a href="https://www.linkedin.com/in/sara-luisa-zarama" target="_blank"
+          >Sara.Zara-ma</a
+        >
+      </p>
+
+    <!--Bootstrap-->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="static/css/styles.css" />
+
+    
+</body>
+</html>
